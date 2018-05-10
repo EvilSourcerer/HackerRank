@@ -71,12 +71,12 @@ public class Solution {
       time = word[m] + " minute past " + word[h];
     } else if (m == 15) {
       time = "quarter past " + word[h];
+    } else if (m < 30) {
+      time = word[1] + " minutes past " + word[h];
     } else if (m == 30) {
       time = "half past " + word[h];
     } else if (m == 45) {
       time = "quarter to " + word[h + 1];
-    } else if (m < 30) {
-      time = word[1] + " minutes past " + word[h];
     } else {
       time = word[60 - m] + " minutes to " + word[h + 1];
     }
